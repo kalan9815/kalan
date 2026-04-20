@@ -266,6 +266,7 @@ a, .project-title, .name-link {
   background: #1a1a1a;
   color: #ffffff;
   font-size: 13px;
+  font-weight: 700;
   letter-spacing: 0.03em;
   padding: 10px 20px;
   border-radius: 20px;
