@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="image-trail.css">
   <style>
     .about-hero {
       display: flex;
@@ -215,17 +216,57 @@
       </div>
     </div>
 
-    <!-- TiltedCard -->
-    <div style="display: flex; flex-direction: column; align-items: center; margin-top: 160px;">
+    <!-- On Taste -->
+    <div style="margin-top: 16px;">
+      <p style="font-size: 17px; font-weight: 700; color: #1a1a1a; line-height: 1.6; margin-bottom: 8px;">To have good taste.</p>
+      <p style="font-size: 15px; color: #999999; line-height: 1.8; margin-bottom: 0;">It's not a vague idea. Break it down and it's three things: a sharp aesthetic instinct, a deep sensitivity to what people truly need, and the ability to make the right call at the moments that matter. When AI removes every technical barrier from design, good taste becomes the only barrier left.</p>
+    </div>
+
+    <!-- ImageTrail -->
+    <div id="image-trail-wrap" style="margin-top: 160px; height: 400px; border-radius: 40px; overflow: hidden; background: #f7f7f7; position: relative;">
+      <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; z-index: 0; pointer-events: none;">
+        <p style="font-size: 28px; font-weight: 700; color: #e8e8e8; line-height: 1.4; margin: 0; text-align: center;">I design products and I design the life I live.</p>
+      </div>
+    </div>
+
+    <!-- Life section -->
+    <div style="margin-top: 48px;">
+      <p style="font-size: 17px; font-weight: 700; color: #1a1a1a; line-height: 1.6; margin-bottom: 24px;">We all die. Might as well live interestingly.</p>
+      <div style="display: flex; flex-direction: column; gap: 0;">
+        <div class="exp-row">
+          <span class="exp-company">🏋️ Fitness</span>
+          <span class="exp-role" style="text-align: right; color: #999;">Lost 10kg in 3 months — body fat from 28% down to 16%. Been training consistently for 3 years now.</span>
+        </div>
+        <div class="exp-row">
+          <span class="exp-company">📷 Photography</span>
+          <span class="exp-role" style="text-align: right; color: #999;">Worked as a freelance photographer. Shot content for bloggers and a few almost-famous actors.</span>
+        </div>
+        <div class="exp-row">
+          <span class="exp-company">🎮 Gaming</span>
+          <span class="exp-role" style="text-align: right; color: #999;">Big fan of anime-style games. Total top-ups: ¥100,000+ (no regrets).</span>
+        </div>
+        <div class="exp-row">
+          <span class="exp-company">✈️ Travel</span>
+          <span class="exp-role" style="text-align: right; color: #999;">Dream of traveling the world. Reality: keep circling around Southeast Asia.</span>
+        </div>
+        <div class="exp-row">
+          <span class="exp-company">🐱 Pets</span>
+          <span class="exp-role" style="text-align: right; color: #999;">Three cats. The oldest one just turned six.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- TiltedCard (hidden) -->
+    <!-- <div style="display: flex; flex-direction: column; align-items: center; margin-top: 240px;">
       <div id="tilted-card-wrap-2"></div>
       <div style="text-align: center; margin-top: 36px;">
         <h2 class="name" style="margin-bottom: 8px;">KALAN</h2>
         <p class="hero-intro">Sincerity made me love life.</p>
       </div>
-    </div>
+    </div> -->
 
-    <!-- FlowingMenu: Hobbies -->
-    <div id="flowing-menu" style="margin-top: 64px;"></div>
+    <!-- FlowingMenu: Hobbies (hidden) -->
+    <!-- <div id="flowing-menu" style="margin-top: 64px;"></div> -->
 
     <!-- Footer -->
     <!-- <footer class="about-footer">
@@ -237,6 +278,7 @@
 
   <script src="magnet-lines.js"></script>
   <script src="flowing-menu.js"></script>
+  <script src="image-trail.js"></script>
   <script src="tilted-card.js"></script>
   <script>
     createMagnetLines({
@@ -250,14 +292,19 @@
       baseAngle: -10,
     });
 
-    createFlowingMenu({
-      container: document.getElementById('flowing-menu'),
-      speed: 25,
+    createImageTrail({
+      container: document.getElementById('image-trail-wrap'),
+      threshold: 40,
       items: [
-        { text: 'Fitness',     desc: 'Lost 20kg in 3 months. Body fat: 27% → 17%.',             color: '#A0C915' },
-        { text: 'Photography', desc: 'Worked as an indie photographer. Shot young actors.',      color: '#000000' },
-        { text: 'Gaming',      desc: 'Spent ¥100,000+ in-game. Zero regrets.',                  color: '#FB84FF' },
-        { text: 'Travel',      desc: 'Dreamed of the world. Ended up wandering Southeast Asia.', color: '#FADA22' },
+        'images/p1.jpg',
+        'images/p2.jpg',
+        'images/p3.jpg',
+        'images/p4.jpg',
+        'images/p5.jpg',
+        'images/p6.jpg',
+        'images/p7.jpg',
+        'images/p8.jpg',
+        'images/p9.jpg',
       ],
     });
 
