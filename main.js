@@ -1,7 +1,7 @@
 // ===== 鼠标距离着色效果 =====
 const fadeRadius = 160;
 const darkColor  = [26, 26, 26];    // #1a1a1a
-const lightColor = [176, 176, 176]; // 原始灰
+const lightColor = [153, 153, 153]; // #999999
 
 function applyProximityColor(el) {
   const text = el.textContent;

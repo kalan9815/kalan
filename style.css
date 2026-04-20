@@ -104,7 +104,7 @@ a, .project-title, .name-link {
 
 .project-meta {
   font-size: 15px;
-  color: #b0b0b0;
+  color: #999999;
   white-space: nowrap;
   flex-shrink: 0;
   letter-spacing: 0.01em;
@@ -149,13 +149,13 @@ a, .project-title, .name-link {
 
 .slogan {
   font-size: 15px;
-  color: #b0b0b0;
+  color: #999999;
   letter-spacing: 0.01em;
 }
 
 .email {
   font-size: 15px;
-  color: #b0b0b0;
+  color: #999999;
   text-decoration: none;
   transition: color 0.2s;
 }
