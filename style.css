@@ -41,7 +41,6 @@ a, .project-title, .name-link {
 .container {
   width: 100%;
   max-width: 1080px;
-  min-width: 480px;
   margin: 0 auto;
   padding: 80px 120px 60px;
 }
@@ -283,23 +282,7 @@ a, .project-title, .name-link {
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
   .container {
-    padding: 48px 24px 48px;
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    padding: 40px 20px 40px;
-  }
-
-  .name {
-    font-size: 18px;
-  }
-
-  .footer {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
+    padding: 48px 32px 48px;
   }
 
   .project-row {
@@ -309,5 +292,50 @@ a, .project-title, .name-link {
 
   .project-title {
     text-align: left;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .project-text {
+    padding: 48px 0 24px;
+  }
+
+  .project-content {
+    margin-bottom: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 40px 20px 40px;
+  }
+
+  .name {
+    font-size: 22px;
+  }
+
+  .bio {
+    font-size: 14px;
+  }
+
+  .project-meta {
+    font-size: 13px;
+  }
+
+  .project-title {
+    font-size: 15px;
+  }
+
+  .slogan,
+  .email {
+    font-size: 13px;
+  }
+
+  .project-text {
+    padding: 36px 0 20px;
   }
 }

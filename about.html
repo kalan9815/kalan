@@ -157,13 +157,86 @@
       color: #1a1a1a;
     }
 
+    .image-trail-wrap {
+      margin-top: 80px;
+      height: 400px;
+      border-radius: 40px;
+      overflow: hidden;
+      background: #f7f7f7;
+      position: relative;
+    }
+
+    .image-trail-text {
+      font-size: 28px;
+      font-weight: 700;
+      color: #e8e8e8;
+      line-height: 1.4;
+      margin: 0;
+      text-align: center;
+      padding: 0 24px;
+    }
+
+    .life-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 18px 0;
+      border-bottom: 1px solid #f0f0f0;
+      gap: 24px;
+    }
+
+    .life-row:first-child {
+      border-top: 1px solid #f0f0f0;
+    }
+
+    .life-desc {
+      font-size: 15px;
+      color: #999;
+      text-align: right;
+      line-height: 1.7;
+    }
+
     @media (max-width: 768px) {
-      .about-hero {
-        flex-direction: column;
-        gap: 40px;
-      }
       .magnet-wrap {
-        align-self: flex-start;
+        transform: scale(0.75);
+        transform-origin: center center;
+        margin-bottom: -20px;
+      }
+
+      .image-trail-wrap {
+        margin-top: 48px;
+        height: 280px;
+        border-radius: 24px;
+      }
+
+      .image-trail-text {
+        font-size: 20px;
+      }
+
+      .life-row {
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .life-desc {
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .magnet-wrap {
+        transform: scale(0.6);
+        transform-origin: center center;
+        margin-bottom: -48px;
+      }
+
+      .image-trail-wrap {
+        height: 220px;
+        border-radius: 20px;
+      }
+
+      .image-trail-text {
+        font-size: 16px;
       }
     }
   </style>
@@ -223,9 +296,9 @@
     </div>
 
     <!-- ImageTrail -->
-    <div id="image-trail-wrap" style="margin-top: 160px; height: 400px; border-radius: 40px; overflow: hidden; background: #f7f7f7; position: relative;">
+    <div id="image-trail-wrap" class="image-trail-wrap">
       <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; z-index: 0; pointer-events: none;">
-        <p style="font-size: 28px; font-weight: 700; color: #e8e8e8; line-height: 1.4; margin: 0; text-align: center;">I design products and I design the life I live.</p>
+        <p class="image-trail-text">I design products and I design the life I live.</p>
       </div>
     </div>
 
@@ -233,25 +306,25 @@
     <div style="margin-top: 48px;">
       <p style="font-size: 17px; font-weight: 700; color: #1a1a1a; line-height: 1.6; margin-bottom: 24px;">We all die. Might as well live interestingly.</p>
       <div style="display: flex; flex-direction: column; gap: 0;">
-        <div class="exp-row">
+        <div class="life-row">
           <span class="exp-company">🏋️ Fitness</span>
-          <span class="exp-role" style="text-align: right; color: #999;">Lost 10kg in 3 months — body fat from 28% down to 16%. Been training consistently for 3 years now.</span>
+          <span class="life-desc">Lost 10kg in 3 months — body fat from 28% down to 16%. Been training consistently for 3 years now.</span>
         </div>
-        <div class="exp-row">
+        <div class="life-row">
           <span class="exp-company">📷 Photography</span>
-          <span class="exp-role" style="text-align: right; color: #999;">Worked as a freelance photographer. Shot content for bloggers and a few almost-famous actors.</span>
+          <span class="life-desc">Worked as a freelance photographer. Shot content for bloggers and a few almost-famous actors.</span>
         </div>
-        <div class="exp-row">
+        <div class="life-row">
           <span class="exp-company">🎮 Gaming</span>
-          <span class="exp-role" style="text-align: right; color: #999;">Big fan of anime-style games. Total top-ups: ¥100,000+ (no regrets).</span>
+          <span class="life-desc">Big fan of anime-style games. Total top-ups: ¥100,000+ (no regrets).</span>
         </div>
-        <div class="exp-row">
+        <div class="life-row">
           <span class="exp-company">✈️ Travel</span>
-          <span class="exp-role" style="text-align: right; color: #999;">Dream of traveling the world. Reality: keep circling around Southeast Asia.</span>
+          <span class="life-desc">Dream of traveling the world. Reality: keep circling around Southeast Asia.</span>
         </div>
-        <div class="exp-row">
+        <div class="life-row">
           <span class="exp-company">🐱 Pets</span>
-          <span class="exp-role" style="text-align: right; color: #999;">Three cats. The oldest one just turned six.</span>
+          <span class="life-desc">Three cats. The oldest one just turned six.</span>
         </div>
       </div>
     </div>

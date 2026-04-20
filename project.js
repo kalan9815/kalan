@@ -27,6 +27,7 @@ function addImg(container, src, alt) {
   img.src = src;
   img.alt = alt;
   img.className = 'project-img';
+  img.loading = 'lazy';
   container.appendChild(img);
 }
 
