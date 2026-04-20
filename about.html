@@ -4,17 +4,275 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About — KALAN</title>
+  <link rel="icon" type="image/png" href="favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .about-hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 48px 0 0;
+      margin-bottom: 64px;
+    }
+
+    .magnet-wrap {
+      margin-bottom: 36px;
+    }
+
+    .hero-text .name {
+      margin-bottom: 8px;
+    }
+
+    .hero-intro {
+      font-size: 18px;
+      color: #999999;
+      line-height: 1.8;
+    }
+
+    /* ===== About Sections ===== */
+    .about-section {
+      margin-bottom: 56px;
+    }
+
+    .about-section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #bbbbbb;
+      margin-bottom: 16px;
+    }
+
+    .about-section-body {
+      font-size: 15px;
+      color: #1a1a1a;
+      line-height: 1.8;
+    }
+
+    .about-section-body p + p {
+      margin-top: 12px;
+    }
+
+    .taste-items {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .taste-item {
+      display: flex;
+      gap: 16px;
+      align-items: baseline;
+    }
+
+    .taste-num {
+      font-size: 11px;
+      font-weight: 700;
+      color: #bbbbbb;
+      letter-spacing: 0.08em;
+      flex-shrink: 0;
+      width: 20px;
+    }
+
+    .taste-text {
+      font-size: 15px;
+      color: #1a1a1a;
+      line-height: 1.7;
+    }
+
+    /* ===== Experience ===== */
+    .exp-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .exp-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 18px 0;
+      border-bottom: 1px solid #f0f0f0;
+      gap: 24px;
+    }
+
+    .exp-row:first-child {
+      border-top: 1px solid #f0f0f0;
+    }
+
+    .exp-left {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .exp-company {
+      font-size: 17px;
+      font-weight: 700;
+      color: #1a1a1a;
+      letter-spacing: 0.01em;
+    }
+
+    .exp-role {
+      font-size: 15px;
+      color: #999999;
+    }
+
+    .exp-period {
+      font-size: 15px;
+      color: #bbbbbb;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    /* ===== Footer ===== */
+    .about-footer {
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: 1px solid #e0e0e0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .about-footer .slogan {
+      font-size: 15px;
+      color: #999999;
+    }
+
+    .about-footer .email {
+      font-size: 15px;
+      color: #999999;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .about-footer .email:hover {
+      color: #1a1a1a;
+    }
+
+    @media (max-width: 768px) {
+      .about-hero {
+        flex-direction: column;
+        gap: 40px;
+      }
+      .magnet-wrap {
+        align-self: flex-start;
+      }
+    }
+  </style>
 </head>
 <body>
   <main class="container">
-    <header class="header">
-      <h1 class="name">KALAN</h1>
-      <p class="bio">A product designer redefining the boundaries of design with AI. Skilled at driving 0-to-1 product definition and execution through high uncertainty. I build AI products — and I build products with AI.</p>
-    </header>
+
+    <!-- Hero: MagnetLines + TiltedCard + intro -->
+    <div class="about-hero">
+      <div class="magnet-wrap">
+        <div id="magnet-lines"></div>
+      </div>
+      <div class="hero-text">
+        <h1 class="name">KALAN</h1>
+        <p class="hero-intro">Curiosity made me a designer.</p>
+      </div>
+    </div>
+
+    <!-- Section: Experience -->
+    <div class="about-section">
+      <div class="exp-list">
+        <div class="exp-row">
+          <div class="exp-left">
+            <span class="exp-company">Rednote</span>
+            <span class="exp-role">0-to-1 AI products · iOS shipped</span>
+          </div>
+          <span class="exp-period">2025 – now</span>
+        </div>
+        <div class="exp-row">
+          <div class="exp-left">
+            <span class="exp-company">ByteDance</span>
+            <span class="exp-role">AI embedded into system-level UX on Doubao OS</span>
+          </div>
+          <span class="exp-period">2024 – 2025</span>
+        </div>
+        <div class="exp-row">
+          <div class="exp-left">
+            <span class="exp-company">Meituan</span>
+            <span class="exp-role">Turned business tension into innovation that shipped</span>
+          </div>
+          <span class="exp-period">2023 – 2024</span>
+        </div>
+        <div class="exp-row">
+          <div class="exp-left">
+            <span class="exp-company">Xiaomi</span>
+            <span class="exp-role">Built MIUI Home 0-to-1 · GDA / IF / Red Dot</span>
+          </div>
+          <span class="exp-period">2020 – 2023</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- TiltedCard -->
+    <div style="display: flex; flex-direction: column; align-items: center; margin-top: 160px;">
+      <div id="tilted-card-wrap-2"></div>
+      <div style="text-align: center; margin-top: 36px;">
+        <h2 class="name" style="margin-bottom: 8px;">KALAN</h2>
+        <p class="hero-intro">Sincerity made me love life.</p>
+      </div>
+    </div>
+
+    <!-- FlowingMenu: Hobbies -->
+    <div id="flowing-menu" style="margin-top: 64px;"></div>
+
+    <!-- Footer -->
+    <!-- <footer class="about-footer">
+      <span class="slogan">Design Beyond, Beyond Design.</span>
+      <a href="mailto:kalan9815@gmail.com" class="email">kalan9815@gmail.com</a>
+    </footer> -->
+
   </main>
+
+  <script src="magnet-lines.js"></script>
+  <script src="flowing-menu.js"></script>
+  <script src="tilted-card.js"></script>
+  <script>
+    createMagnetLines({
+      container: document.getElementById('magnet-lines'),
+      rows: 9,
+      columns: 9,
+      containerSize: '360px',
+      lineColor: '#1a1a1a',
+      lineWidth: '1.5px',
+      lineHeight: '28px',
+      baseAngle: -10,
+    });
+
+    createFlowingMenu({
+      container: document.getElementById('flowing-menu'),
+      speed: 25,
+      items: [
+        { text: 'Fitness',     desc: 'Lost 20kg in 3 months. Body fat: 27% → 17%.',             color: '#A0C915' },
+        { text: 'Photography', desc: 'Worked as an indie photographer. Shot young actors.',      color: '#000000' },
+        { text: 'Gaming',      desc: 'Spent ¥100,000+ in-game. Zero regrets.',                  color: '#FB84FF' },
+        { text: 'Travel',      desc: 'Dreamed of the world. Ended up wandering Southeast Asia.', color: '#FADA22' },
+      ],
+    });
+
+    createTiltedCard({
+      container: document.getElementById('tilted-card-wrap-2'),
+      imageSrc: 'images/avatar.jpeg',
+      altText: 'Kalan',
+      captionText: 'Kalan',
+      width: '360px',
+      height: '360px',
+      rotateAmplitude: 14,
+      scaleOnHover: 1.06,
+      showTooltip: false,
+      borderRadius: '36px',
+    });
+  </script>
 </body>
 </html>

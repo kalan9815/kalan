@@ -1,7 +1,7 @@
-// ===== 鼠标距离着色效果 =====
+// ===== 着色效果（bio、meta、footer）=====
 const fadeRadius = 160;
-const darkColor  = [26, 26, 26];    // #1a1a1a
-const lightColor = [153, 153, 153]; // #999999
+const darkColor  = [26, 26, 26];
+const lightColor = [153, 153, 153];
 
 function applyProximityColor(el) {
   const text = el.textContent;
@@ -30,7 +30,6 @@ function applyProximityColor(el) {
   });
 }
 
-// 应用到 bio、所有 meta、footer 文字
 applyProximityColor(document.getElementById('bio'));
 document.querySelectorAll('.project-meta').forEach(applyProximityColor);
 document.querySelectorAll('.slogan, .footer .email').forEach(applyProximityColor);

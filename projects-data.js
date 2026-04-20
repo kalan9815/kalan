@@ -31,7 +31,6 @@ const PROJECTS = {
   },
   "miui-music": {
     title: "MIUI AROUND MUSIC 1.0",
-    desc: "A product designer redefining the boundaries of design with AI. Skilled at driving 0-to-1 product definition and execution through high uncertainty. I build AI products — and I build products with AI.",
     comingSoon: false,
     images: [
       "images/music/02-1.jpg",
