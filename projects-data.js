@@ -16,13 +16,41 @@ const PROJECTS = {
   },
   "kawaii-anime": {
     title: "かわいいアニメ",
-    comingSoon: true,
-    images: []
+    comingSoon: false,
+    images: [
+      "images/anime/04-1.png",
+      "images/anime/04-2.png",
+      "images/anime/04-3.png",
+      "images/anime/04-4.png",
+      "images/anime/04-5.png",
+      "images/anime/04-6.png",
+      "images/anime/04-7.png",
+      "images/anime/04-8.png",
+      "images/anime/04-9.png",
+      "images/anime/04-10.png",
+      "images/anime/04-11.png",
+      "images/anime/04-12.png",
+      "images/anime/04-13.png",
+      "images/anime/04-14.png"
+    ]
   },
   "meituan": {
     title: "EXPLORING COMMERCIAL INNOVATION",
-    comingSoon: true,
-    images: []
+    comingSoon: false,
+    images: [
+      "images/meituan/04-1.jpg",
+      "images/meituan/04-2.jpg",
+      "images/meituan/04-3.jpg",
+      "images/meituan/04-4.jpg",
+      "images/meituan/04-5.jpg",
+      "images/meituan/04-6.jpg",
+      "images/meituan/04-7.jpg",
+      "images/meituan/04-8.jpg",
+      "images/meituan/04-9.jpg",
+      "images/meituan/04-10.jpg",
+      "images/meituan/04-11.jpg",
+      "images/meituan/04-12.jpg"
+    ]
   },
   "miui-home": {
     title: "MIUI HOME 1.0",
