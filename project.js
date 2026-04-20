@@ -9,7 +9,9 @@ if (project) {
 
   const content = document.getElementById('project-content');
 
-  if (projectId === 'miui-music') {
+  if (projectId === 'miui-home') {
+    buildMiuiHome(content);
+  } else if (projectId === 'miui-music') {
     buildMiuiMusic(content);
   } else {
     // 通用：直接列图
@@ -33,6 +35,25 @@ function addText(container, html) {
   block.className = 'project-text';
   block.innerHTML = html;
   container.appendChild(block);
+}
+
+// ── MIUI Home 图文排版 ────────────────────────
+
+function buildMiuiHome(c) {
+  const imgs = project.images;
+  const t = project.title;
+
+  addText(c, `
+    <p class="pt-zh">随着手机成为用户最私密的数字空间，桌面不再只是 App 的陈列架——它是用户每天醒来第一眼看到的地方。MIUI Home 1.0 从零重建小米桌面体验，目标是让主屏幕成为一个安静、克制、真正属于用户的个人空间。</p>
+    <p class="pt-en">As phones became users' most intimate digital space, the home screen was no longer just a shelf for apps — it was the first thing they saw every morning. MIUI Home 1.0 rebuilt the Xiaomi launcher from scratch, with the goal of turning the home screen into a calm, restrained, and truly personal space.</p>
+  `);
+
+  addImg(c, imgs[0], t);
+  addImg(c, imgs[1], t);
+
+  for (let i = 2; i < imgs.length; i++) {
+    addImg(c, imgs[i], t);
+  }
 }
 
 // ── MIUI Around Music 图文排版 ─────────────────
