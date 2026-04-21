@@ -1,21 +1,25 @@
 const PROJECTS = {
   "dots-ai": {
     title: "DOTS AI",
+    tag: "Learning to create value within constraints",
     comingSoon: true,
     images: []
   },
   "ai-project-n": {
     title: "AI PROJECT N",
+    tag: "A practice in "small but beautiful"",
     comingSoon: true,
     images: []
   },
   "ai-project-l": {
     title: "AI PROJECT L",
+    tag: "More than a designer now",
     comingSoon: true,
     images: []
   },
   "kawaii-anime": {
     title: "かわいいアニメ",
+    tag: "Designing for interesting people",
     comingSoon: false,
     images: [
       "images/anime/04-1.jpg",
@@ -36,6 +40,7 @@ const PROJECTS = {
   },
   "meituan": {
     title: "EXPLORING COMMERCIAL INNOVATION",
+    tag: "Balancing commerce and experience",
     comingSoon: false,
     images: [
       "images/meituan/04-1.jpg",
@@ -54,6 +59,7 @@ const PROJECTS = {
   },
   "miui-home": {
     title: "MIUI HOME 1.0",
+    tag: "A designer's moment in the spotlight",
     comingSoon: false,
     images: [
       "images/home/03-1.jpg",
@@ -75,6 +81,7 @@ const PROJECTS = {
   },
   "miui-music": {
     title: "MIUI AROUND MUSIC 1.0",
+    tag: "Sculpting the aesthetics of a system",
     comingSoon: false,
     images: [
       "images/music/02-1.jpg",
