@@ -23,6 +23,53 @@
 
   </main>
 
+  <!-- Gradual blur overlay at bottom of viewport -->
+  <div id="gradual-blur-overlay"></div>
+
+  <script>
+    (function () {
+      const overlay = document.getElementById('gradual-blur-overlay');
+      const divCount = 8;
+      const height = 120;
+      const strength = 2;
+
+      overlay.style.cssText = `
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: ${height}px;
+        pointer-events: none;
+        z-index: 100;
+      `;
+
+      for (let i = 1; i <= divCount; i++) {
+        const progress = i / divCount;
+        const t = progress * progress * (3 - 2 * progress); // bezier
+        const blurVal = (Math.pow(2, t * 4) * 0.0625 * strength).toFixed(3);
+        const inc = 100 / divCount;
+        const p1 = ((inc * i - inc) * 10 / 10).toFixed(1);
+        const p2 = (inc * i).toFixed(1);
+        const p3 = Math.min(inc * i + inc, 100).toFixed(1);
+        const p4 = Math.min(inc * i + inc * 2, 100).toFixed(1);
+
+        const gradient = `transparent ${p1}%, black ${p2}%, black ${p3}%, transparent ${p4}%`;
+        const mask = `linear-gradient(to bottom, ${gradient})`;
+
+        const div = document.createElement('div');
+        div.style.cssText = `
+          position: absolute;
+          inset: 0;
+          -webkit-mask-image: ${mask};
+          mask-image: ${mask};
+          backdrop-filter: blur(${blurVal}rem);
+          -webkit-backdrop-filter: blur(${blurVal}rem);
+        `;
+        overlay.appendChild(div);
+      }
+    })();
+  </script>
+
   <script src="projects-data.js"></script>
   <script src="project.js"></script>
 </body>
