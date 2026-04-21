@@ -98,8 +98,13 @@ a, .project-title, .name-link {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  padding: 20px 0;
+  padding: 24px 0;
   gap: 24px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.project-row:last-of-type {
+  border-bottom: none;
 }
 
 .project-meta {
