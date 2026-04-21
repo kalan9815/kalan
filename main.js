@@ -30,7 +30,8 @@ function applyProximityColor(el) {
   });
 }
 
-applyProximityColor(document.getElementById('bio'));
+const bioEl = document.getElementById('bio');
+if (bioEl) applyProximityColor(bioEl);
 document.querySelectorAll('.project-meta').forEach(applyProximityColor);
 document.querySelectorAll('.slogan, .footer .email').forEach(applyProximityColor);
 

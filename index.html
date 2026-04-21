@@ -9,15 +9,328 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="image-trail.css">
+  <style>
+    .about-hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 48px 0 0;
+      margin-bottom: 64px;
+    }
+
+    .magnet-wrap {
+      margin-bottom: 36px;
+    }
+
+    .hero-text .name {
+      margin-bottom: 8px;
+    }
+
+    .hero-intro {
+      font-size: 18px;
+      color: #999999;
+      line-height: 1.8;
+    }
+
+    /* ===== About Sections ===== */
+    .about-section {
+      margin-bottom: 56px;
+    }
+
+    .about-section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #bbbbbb;
+      margin-bottom: 16px;
+    }
+
+    .about-section-body {
+      font-size: 15px;
+      color: #1a1a1a;
+      line-height: 1.8;
+    }
+
+    .about-section-body p + p {
+      margin-top: 12px;
+    }
+
+    .taste-items {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .taste-item {
+      display: flex;
+      gap: 16px;
+      align-items: baseline;
+    }
+
+    .taste-num {
+      font-size: 11px;
+      font-weight: 700;
+      color: #bbbbbb;
+      letter-spacing: 0.08em;
+      flex-shrink: 0;
+      width: 20px;
+    }
+
+    .taste-text {
+      font-size: 15px;
+      color: #1a1a1a;
+      line-height: 1.7;
+    }
+
+    /* ===== Experience ===== */
+    .exp-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .exp-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 18px 0;
+      border-bottom: 1px solid #f0f0f0;
+      gap: 24px;
+    }
+
+    .exp-row:first-child {
+      border-top: 1px solid #f0f0f0;
+    }
+
+    .exp-left {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .exp-company {
+      font-size: 17px;
+      font-weight: 700;
+      color: #1a1a1a;
+      letter-spacing: 0.01em;
+    }
+
+    .exp-role {
+      font-size: 15px;
+      color: #999999;
+    }
+
+    .exp-period {
+      font-size: 15px;
+      color: #bbbbbb;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    /* ===== Footer ===== */
+    .about-footer {
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: 1px solid #e0e0e0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .about-footer .slogan {
+      font-size: 15px;
+      color: #999999;
+    }
+
+    .about-footer .email {
+      font-size: 15px;
+      color: #999999;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .about-footer .email:hover {
+      color: #1a1a1a;
+    }
+
+    .image-trail-wrap {
+      margin-top: 80px;
+      height: 400px;
+      border-radius: 40px;
+      overflow: hidden;
+      background: #f7f7f7;
+      position: relative;
+    }
+
+    .image-trail-text {
+      font-size: 28px;
+      font-weight: 700;
+      color: #e8e8e8;
+      line-height: 1.4;
+      margin: 0;
+      text-align: center;
+      padding: 0 24px;
+    }
+
+    .life-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 18px 0;
+      border-bottom: 1px solid #f0f0f0;
+      gap: 24px;
+    }
+
+    .life-row:first-child {
+      border-top: 1px solid #f0f0f0;
+    }
+
+    .life-desc {
+      font-size: 15px;
+      color: #999;
+      text-align: right;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 768px) {
+      .magnet-wrap {
+        transform: scale(0.75);
+        transform-origin: center center;
+        margin-bottom: -20px;
+      }
+
+      .image-trail-wrap {
+        margin-top: 48px;
+        height: 280px;
+        border-radius: 24px;
+      }
+
+      .image-trail-text {
+        font-size: 20px;
+      }
+
+      .life-row {
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .life-desc {
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .magnet-wrap {
+        transform: scale(0.6);
+        transform-origin: center center;
+        margin-bottom: -48px;
+      }
+
+      .image-trail-wrap {
+        height: 220px;
+        border-radius: 20px;
+      }
+
+      .image-trail-text {
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
 <body>
   <main class="container">
-    <header class="header">
-      <h1 class="name"><a href="about.html" class="name-link" target="_blank">KALAN</a></h1>
-      <p class="bio" id="bio">A product designer redefining the boundaries of design with AI. Skilled at driving 0-to-1 product definition and execution through high uncertainty. I build AI products — and I build products with AI.</p>
-    </header>
 
-    <section class="projects">
+    <!-- Hero: MagnetLines + TiltedCard + intro -->
+    <div class="about-hero">
+      <div class="magnet-wrap">
+        <div id="magnet-lines"></div>
+      </div>
+      <div class="hero-text">
+        <h1 class="name">KALAN</h1>
+        <p class="hero-intro">Curiosity made me a designer.</p>
+      </div>
+    </div>
+
+    <!-- Section: Experience -->
+    <div class="about-section">
+      <div class="exp-list">
+        <div class="exp-row">
+          <div class="exp-left">
+            <span class="exp-company">Rednote</span>
+            <span class="exp-role">0-to-1 AI products · iOS shipped</span>
+          </div>
+          <span class="exp-period">2025 – now</span>
+        </div>
+        <div class="exp-row">
+          <div class="exp-left">
+            <span class="exp-company">ByteDance</span>
+            <span class="exp-role">AI embedded into system-level UX on Doubao OS</span>
+          </div>
+          <span class="exp-period">2024 – 2025</span>
+        </div>
+        <div class="exp-row">
+          <div class="exp-left">
+            <span class="exp-company">Meituan</span>
+            <span class="exp-role">Turned business tension into innovation that shipped</span>
+          </div>
+          <span class="exp-period">2023 – 2024</span>
+        </div>
+        <div class="exp-row">
+          <div class="exp-left">
+            <span class="exp-company">Xiaomi</span>
+            <span class="exp-role">Built MIUI Home 0-to-1 · GDA / IF / Red Dot</span>
+          </div>
+          <span class="exp-period">2020 – 2023</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- On Taste -->
+    <div style="margin-top: 16px;">
+      <p style="font-size: 17px; font-weight: 700; color: #1a1a1a; line-height: 1.6; margin-bottom: 8px;">To have good taste.</p>
+      <p style="font-size: 15px; color: #999999; line-height: 1.8; margin-bottom: 0;">It's not a vague idea. Break it down and it's three things: a sharp aesthetic instinct, a deep sensitivity to what people truly need, and the ability to make the right call at the moments that matter. When AI removes every technical barrier from design, good taste becomes the only barrier left.</p>
+    </div>
+
+    <!-- ImageTrail -->
+    <div id="image-trail-wrap" class="image-trail-wrap">
+      <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; z-index: 0; pointer-events: none;">
+        <p class="image-trail-text">I design products and I design the life I live.</p>
+      </div>
+    </div>
+
+    <!-- Life section -->
+    <div style="margin-top: 48px;">
+      <p style="font-size: 17px; font-weight: 700; color: #1a1a1a; line-height: 1.6; margin-bottom: 24px;">We all die. Might as well live interestingly.</p>
+      <div style="display: flex; flex-direction: column; gap: 0;">
+        <div class="life-row">
+          <span class="exp-company">🏋️ Fitness</span>
+          <span class="life-desc">Lost 10kg in 3 months — body fat from 28% down to 16%. Been training consistently for 3 years now.</span>
+        </div>
+        <div class="life-row">
+          <span class="exp-company">📷 Photography</span>
+          <span class="life-desc">Worked as a freelance photographer. Shot content for bloggers and a few almost-famous actors.</span>
+        </div>
+        <div class="life-row">
+          <span class="exp-company">🎮 Gaming</span>
+          <span class="life-desc">Big fan of anime-style games. Total top-ups: ¥100,000+ (no regrets).</span>
+        </div>
+        <div class="life-row">
+          <span class="exp-company">✈️ Travel</span>
+          <span class="life-desc">Dream of traveling the world. Reality: keep circling around Southeast Asia.</span>
+        </div>
+        <div class="life-row">
+          <span class="exp-company">🐱 Pets</span>
+          <span class="life-desc">Three cats. The oldest one just turned six.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <section class="projects" style="margin-top: 64px;">
       <div class="divider"></div>
 
       <div class="project-row">
@@ -58,15 +371,79 @@
       <div class="divider"></div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer" style="padding-top: 24px;">
       <span class="slogan">Design Beyond, Beyond Design.</span>
       <a href="mailto:kalan9815@gmail.com" class="email">kalan9815@gmail.com</a>
     </footer>
-  </main>
 
-  <div class="toast" id="toast">Coming soon</div>
+    <div class="toast" id="toast">Coming soon</div>
+
+    <!-- TiltedCard (hidden) -->
+    <!-- <div style="display: flex; flex-direction: column; align-items: center; margin-top: 240px;">
+      <div id="tilted-card-wrap-2"></div>
+      <div style="text-align: center; margin-top: 36px;">
+        <h2 class="name" style="margin-bottom: 8px;">KALAN</h2>
+        <p class="hero-intro">Sincerity made me love life.</p>
+      </div>
+    </div> -->
+
+    <!-- FlowingMenu: Hobbies (hidden) -->
+    <!-- <div id="flowing-menu" style="margin-top: 64px;"></div> -->
+
+    <!-- Footer -->
+    <!-- <footer class="about-footer">
+      <span class="slogan">Design Beyond, Beyond Design.</span>
+      <a href="mailto:kalan9815@gmail.com" class="email">kalan9815@gmail.com</a>
+    </footer> -->
+
+  </main>
 
   <script src="projects-data.js"></script>
   <script src="main.js"></script>
+  <script src="magnet-lines.js"></script>
+  <script src="flowing-menu.js"></script>
+  <script src="image-trail.js"></script>
+  <script src="tilted-card.js"></script>
+  <script>
+    createMagnetLines({
+      container: document.getElementById('magnet-lines'),
+      rows: 9,
+      columns: 9,
+      containerSize: '360px',
+      lineColor: '#1a1a1a',
+      lineWidth: '1.5px',
+      lineHeight: '28px',
+      baseAngle: -10,
+    });
+
+    createImageTrail({
+      container: document.getElementById('image-trail-wrap'),
+      threshold: 40,
+      items: [
+        'images/p1.jpg',
+        'images/p2.jpg',
+        'images/p3.jpg',
+        'images/p4.jpg',
+        'images/p5.jpg',
+        'images/p6.jpg',
+        'images/p7.jpg',
+        'images/p8.jpg',
+        'images/p9.jpg',
+      ],
+    });
+
+    createTiltedCard({
+      container: document.getElementById('tilted-card-wrap-2'),
+      imageSrc: 'images/avatar.jpeg',
+      altText: 'Kalan',
+      captionText: 'Kalan',
+      width: '360px',
+      height: '360px',
+      rotateAmplitude: 14,
+      scaleOnHover: 1.06,
+      showTooltip: false,
+      borderRadius: '36px',
+    });
+  </script>
 </body>
 </html>
