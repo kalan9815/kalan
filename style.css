@@ -289,16 +289,22 @@ a, .project-title, .name-link {
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
   .container {
-    padding: 48px 32px 48px;
+    padding: 48px 28px 48px;
   }
 
   .project-row {
     flex-direction: column;
-    gap: 4px;
+    gap: 6px;
+    padding: 18px 0;
   }
 
   .project-title {
     text-align: left;
+    font-size: 15px;
+  }
+
+  .project-meta {
+    font-size: 13px;
   }
 
   .footer {
@@ -308,33 +314,38 @@ a, .project-title, .name-link {
   }
 
   .project-text {
-    padding: 48px 0 24px;
+    padding: 40px 0 20px;
   }
 
   .project-content {
-    margin-bottom: 48px;
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    padding: 40px 20px 40px;
+    padding-bottom: 100px;
   }
 
   .name {
     font-size: 22px;
   }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 36px 20px 36px;
+  }
+
+  .name {
+    font-size: 20px;
+  }
 
   .bio {
     font-size: 14px;
+    line-height: 1.7;
   }
 
   .project-meta {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .project-title {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .slogan,
@@ -343,6 +354,18 @@ a, .project-title, .name-link {
   }
 
   .project-text {
-    padding: 36px 0 20px;
+    padding: 32px 0 16px;
+  }
+
+  .project-content {
+    padding-bottom: 80px;
+  }
+
+  .hero-intro {
+    font-size: 14px;
+  }
+
+  .divider {
+    margin: 16px 0 0;
   }
 }
