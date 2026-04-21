@@ -36,6 +36,7 @@ const visionEl = document.getElementById('vision-desc');
 if (visionEl) applyProximityColor(visionEl);
 document.querySelectorAll('.project-meta').forEach(applyProximityColor);
 document.querySelectorAll('.slogan, .footer .email').forEach(applyProximityColor);
+document.querySelectorAll('.exp-role, .exp-period, .hero-intro, .life-desc').forEach(applyProximityColor);
 
 // ===== Toast =====
 const titles = document.querySelectorAll('.project-title');
