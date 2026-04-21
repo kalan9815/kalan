@@ -7,7 +7,7 @@ const PROJECTS = {
   },
   "ai-project-n": {
     title: "AI PROJECT N",
-    tag: "A practice in "small but beautiful"",
+    tag: "A practice in 'small but beautiful'",
     comingSoon: true,
     images: []
   },
