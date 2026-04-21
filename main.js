@@ -32,6 +32,8 @@ function applyProximityColor(el) {
 
 const bioEl = document.getElementById('bio');
 if (bioEl) applyProximityColor(bioEl);
+const visionEl = document.getElementById('vision-desc');
+if (visionEl) applyProximityColor(visionEl);
 document.querySelectorAll('.project-meta').forEach(applyProximityColor);
 document.querySelectorAll('.slogan, .footer .email').forEach(applyProximityColor);
 
