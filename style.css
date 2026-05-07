@@ -33,7 +33,7 @@ body {
   user-select: none;
 }
 
-a, .project-title, .name-link {
+a, .project-title {
   cursor: pointer;
 }
 
@@ -67,19 +67,6 @@ a, .project-title, .name-link {
   font-size: 15px;
   color: #999999;
   line-height: 1.65;
-}
-
-.back-link {
-  display: inline-block;
-  font-size: 13px;
-  color: #888888;
-  text-decoration: none;
-  letter-spacing: 0.03em;
-  transition: color 0.2s;
-}
-
-.back-link:hover {
-  color: #1a1a1a;
 }
 
 /* ===== Divider ===== */
@@ -133,16 +120,6 @@ a, .project-title, .name-link {
   color: #A0C915;
 }
 
-.name-link {
-  color: inherit;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.name-link:hover {
-  color: #A0C915;
-}
-
 /* ===== Footer ===== */
 .footer {
   display: flex;
@@ -167,83 +144,6 @@ a, .project-title, .name-link {
 
 .email:hover {
   color: #1a1a1a;
-}
-
-/* ===== Project Text Blocks ===== */
-.project-text {
-  padding: 80px 0 32px; /* 上大下小：与上方图片疏离，与下方图片紧密 */
-  font-family: "PingFang SC", "苹方", -apple-system, BlinkMacSystemFont, sans-serif;
-}
-
-/* 第一个文字块不需要上边距 */
-.project-content > .project-text:first-child {
-  padding-top: 0;
-  padding-bottom: 48px;
-}
-
-.pt-label { display: none; }
-
-.pt-zh {
-  font-size: 15px;
-  font-weight: 400;
-  color: #999999;
-  line-height: 1.9;
-  margin-bottom: 8px;
-}
-
-.pt-en {
-  font-size: 14px;
-  font-weight: 400;
-  color: #999999;
-  line-height: 1.8;
-}
-
-.pt-quote {
-  font-size: 17px;
-  font-weight: 400;
-  color: #1a1a1a;
-  line-height: 1.7;
-  margin-bottom: 32px;
-}
-
-.pt-quote span {
-  font-size: 14px;
-  color: #999999;
-  display: block;
-  margin-top: 6px;
-}
-
-.pt-list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin-bottom: 20px;
-}
-
-.pt-item {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-}
-
-.pt-num {
-  font-size: 12px;
-  color: #cccccc;
-  font-weight: 400;
-  flex-shrink: 0;
-  padding-top: 2px;
-  width: 20px;
-}
-
-.pt-item strong {
-  display: inline;
-  font-weight: 400;
-}
-
-.pt-item div {
-  font-size: 15px;
-  color: #1a1a1a;
-  line-height: 1.8;
 }
 
 /* ===== Project Detail ===== */
@@ -313,10 +213,6 @@ a, .project-title, .name-link {
     gap: 8px;
   }
 
-  .project-text {
-    padding: 40px 0 20px;
-  }
-
   .project-content {
     padding-bottom: 100px;
   }
@@ -351,10 +247,6 @@ a, .project-title, .name-link {
   .slogan,
   .email {
     font-size: 13px;
-  }
-
-  .project-text {
-    padding: 32px 0 16px;
   }
 
   .project-content {

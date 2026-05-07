@@ -9,7 +9,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="image-trail.css">
   <style>
     .about-hero {
       display: flex;
@@ -37,53 +36,6 @@
     /* ===== About Sections ===== */
     .about-section {
       margin-bottom: 56px;
-    }
-
-    .about-section-label {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #bbbbbb;
-      margin-bottom: 16px;
-    }
-
-    .about-section-body {
-      font-size: 15px;
-      color: #1a1a1a;
-      line-height: 1.8;
-    }
-
-    .about-section-body p + p {
-      margin-top: 12px;
-    }
-
-    .taste-items {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      margin-top: 20px;
-    }
-
-    .taste-item {
-      display: flex;
-      gap: 16px;
-      align-items: baseline;
-    }
-
-    .taste-num {
-      font-size: 11px;
-      font-weight: 700;
-      color: #bbbbbb;
-      letter-spacing: 0.08em;
-      flex-shrink: 0;
-      width: 20px;
-    }
-
-    .taste-text {
-      font-size: 15px;
-      color: #1a1a1a;
-      line-height: 1.7;
     }
 
     /* ===== Experience ===== */
@@ -140,32 +92,6 @@
       color: #bbbbbb;
       white-space: nowrap;
       flex-shrink: 0;
-    }
-
-    /* ===== Footer ===== */
-    .about-footer {
-      margin-top: 24px;
-      padding-top: 24px;
-      border-top: 1px solid #e0e0e0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .about-footer .slogan {
-      font-size: 15px;
-      color: #999999;
-    }
-
-    .about-footer .email {
-      font-size: 15px;
-      color: #999999;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    .about-footer .email:hover {
-      color: #1a1a1a;
     }
 
     /* ===== Section spacing ===== */
@@ -316,7 +242,7 @@
 <body>
   <main class="container">
 
-    <!-- Hero: MagnetLines + TiltedCard + intro -->
+    <!-- Hero: MagnetLines + intro -->
     <div class="about-hero">
       <div class="magnet-wrap">
         <div id="magnet-lines"></div>
@@ -375,8 +301,8 @@
           <span class="life-desc">Lost 10kg in 3 months — body fat from 28% down to 16%. Been training consistently for 3 years now</span>
         </div>
         <div class="life-row">
-          <span class="exp-company">📷 Photography</span>
-          <span class="life-desc">Worked as a freelance photographer. Shot content for bloggers and a few almost-famous actors</span>
+          <span class="exp-company">🎨 Creation</span>
+          <span class="life-desc">Worked as a freelance photographer, furniture maker, and design blogger</span>
         </div>
         <div class="life-row">
           <span class="exp-company">🎮 Gaming</span>
@@ -450,32 +376,12 @@
 
     <div class="toast" id="toast">Coming soon</div>
 
-    <!-- TiltedCard (hidden) -->
-    <!-- <div style="display: flex; flex-direction: column; align-items: center; margin-top: 240px;">
-      <div id="tilted-card-wrap-2"></div>
-      <div style="text-align: center; margin-top: 36px;">
-        <h2 class="name" style="margin-bottom: 8px;">KALAN</h2>
-        <p class="hero-intro">Sincerity made me love life.</p>
-      </div>
-    </div> -->
-
-    <!-- FlowingMenu: Hobbies (hidden) -->
-    <!-- <div id="flowing-menu" style="margin-top: 64px;"></div> -->
-
-    <!-- Footer -->
-    <!-- <footer class="about-footer">
-      <span class="slogan">Design Beyond, Beyond Design</span>
-      <a href="mailto:kalan9815@gmail.com" class="email">kalan9815@gmail.com</a>
-    </footer> -->
-
   </main>
 
   <script src="projects-data.js"></script>
   <script src="main.js"></script>
   <script src="magnet-lines.js"></script>
-  <script src="flowing-menu.js"></script>
   <script src="image-trail.js"></script>
-  <script src="tilted-card.js"></script>
   <script>
     createMagnetLines({
       container: document.getElementById('magnet-lines'),
@@ -502,19 +408,6 @@
         'images/p8.jpg',
         'images/p9.jpg',
       ],
-    });
-
-    createTiltedCard({
-      container: document.getElementById('tilted-card-wrap-2'),
-      imageSrc: 'images/avatar.jpeg',
-      altText: 'Kalan',
-      captionText: 'Kalan',
-      width: '360px',
-      height: '360px',
-      rotateAmplitude: 14,
-      scaleOnHover: 1.06,
-      showTooltip: false,
-      borderRadius: '36px',
     });
   </script>
 </body>
